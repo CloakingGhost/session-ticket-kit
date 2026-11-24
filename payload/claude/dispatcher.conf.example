@@ -1,0 +1,28 @@
+# dispatcher.conf.example - copy to dispatcher.conf (same folder) and fill in.  KEY=value, one per line.
+# NO keys, tokens or passwords here. Lines starting with # are comments. The installer writes dispatcher.conf for you.
+
+# Ticket prefix: tickets are PREFIX-12 and session names start with [PREFIX-12]. Must match the Notion Unique ID prefix.
+TICKET_PREFIX=TK
+
+# Git repository folder relative to the project ('.' = the project itself, empty = no code/PR features).
+REPO_DIR=
+# owner/name on GitHub. Empty = read from the repository's origin remote with gh.
+GITHUB_REPO=
+BASE_BRANCH=main
+# Command that must pass before commits (empty = none).
+TEST_COMMAND=
+
+# Notion ticket database: data source ID (UUID, without the collection:// prefix) and its URL. See docs/NOTION-SCHEMA.md in the kit.
+NOTION_DATA_SOURCE_ID=
+NOTION_DB_URL=
+
+# Time zone offset for progress-log timestamps, +HH:MM. (Git Bash 'date' ignores TZ, so it is set here.)
+TIMEZONE_OFFSET=+00:00
+
+# Master session: model and effort (empty effort = model default). Some models need a plan or usage credits.
+MASTER_MODEL=opus
+MASTER_EFFORT=
+
+# Alerts from sub-sessions: levels pushed to you at once (error, attention, done), and a global on/off switch.
+ALERT_LEVELS=error,attention
+ALERTS=on
